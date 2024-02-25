@@ -1,2 +1,2 @@
 call cd ./server
-call ng run dev
+call npm run dev

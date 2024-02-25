@@ -1,2 +1,2 @@
 call cd ./angularapp
-call ng serve --open
+call ng serve --open --port 4200
