@@ -28,6 +28,7 @@ class LottoTicketController {
           countOfBoxes
         FROM LottoTickets
     `);
+    db.close();
     response.send(list);
   }
 
@@ -52,6 +53,7 @@ class LottoTicketController {
           numbers_csv AS numbersCsv
         FROM LottoTicketBoxes where lottoTicketId = ?
     `, [result.id]);
+    db.close();
     response.send(result);
   }
 }

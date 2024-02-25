@@ -14,6 +14,7 @@ export class LottoTicketService {
         for(let lottoTicketBox of ticket.lottoTicketBoxes){
             await db.run(`INSERT INTO LottoTicketBoxes(numbers_csv, lottoTicketId) VALUES ('${lottoTicketBox.numbers.csv}', ${ticket.id})`);
         }
+        db.close();
         return ticket.id;
     }
 }
