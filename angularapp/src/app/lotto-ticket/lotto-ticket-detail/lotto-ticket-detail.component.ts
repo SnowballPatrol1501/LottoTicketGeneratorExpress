@@ -6,8 +6,6 @@ import { Subscription } from 'rxjs';
 import { LottoTicketDetailBoxModel, LottoTicketDetailModel } from './lotto-ticket-detail.models';
 
 const CLASS = "LottoTicketDetailComponent";
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
 
 @Component({
     selector: 'lotto-ticket-detail',
@@ -46,11 +44,9 @@ export class LottoTicketDetailComponent implements OnInit {
         if (!this.id) { this.logger.logInfo(CLASS + ".load / failed"); return; }
         const dto = await this.webApiService.getLottoTicketDetail(this.id);
         this.model = new LottoTicketDetailModel(dto!);
-        debugger;
     }
 
     checkMarked(box: LottoTicketDetailBoxModel, number: number): boolean {
-        debugger;
         return box.numbers.some(n => n == number);
     }
 }

@@ -1,4 +1,4 @@
-export * from './lotto-ticket-detail/lotto-ticket-detail.dtos'
+export * from './lotto-ticket-detail/lotto-ticket-detail.dtos';
 
 export class LottoTicketListResult {
     public id!: number;

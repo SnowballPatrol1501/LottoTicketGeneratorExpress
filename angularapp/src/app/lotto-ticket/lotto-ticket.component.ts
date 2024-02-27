@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CreateLottoTicketCommand, LottoTicketWebApiService } from './lotto-ticket.web-api.service';
 import { LoggerService } from '../global';
 import { LottoTicketListModel } from './lotto-ticket.models';
@@ -7,7 +7,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LottoTicketInsertDialogComponent, LottoTicketInsertDialogResult } from './lotto-ticket-insert-dialog/lotto-ticket-insert-dialog.component';
 
 const CLASS = "LottoTicketComponent";
-
 
 @Component({
     selector: 'lotto-tickets',
