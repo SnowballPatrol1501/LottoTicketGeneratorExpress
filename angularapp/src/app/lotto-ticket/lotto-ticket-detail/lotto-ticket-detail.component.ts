@@ -34,7 +34,7 @@ export class LottoTicketDetailComponent implements OnInit {
     }
 
     get numberPerBox(): number[]{
-        let numbers = [];
+        const numbers = [];
         for(let number = 1; number <= 49; number++) numbers.push(number);
         return numbers;
     }
