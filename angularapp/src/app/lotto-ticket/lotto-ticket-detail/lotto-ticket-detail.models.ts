@@ -18,9 +18,11 @@ export class LottoTicketDetailBoxModel extends LottoTicketDetailBoxResult {
         super();
         return {
             ...dto,
-            numbers: dto.numbersCsv.split(',').map(n => <number>JSON.parse(n)).sort()
+            numbers: dto.numbersCsv.split(',').map(n => <number>JSON.parse(n)).sort(),
+            orderedCsv: dto.numbersCsv.split(',').map(n => <number>JSON.parse(n)).sort((a,b) => a - b).join(', '),
         };
     }
 
+    public orderedCsv: string = "";
     public numbers: number[] = [];
 }
