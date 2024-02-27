@@ -1,7 +1,7 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { Database } from 'sqlite3';
-import { open } from '../node_modules/sqlite/build/index';
+import { open } from 'sqlite';
 
 class App {
   public app: express.Application;

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LottoTicketWebApiService } from '../lotto-ticket.web-api.service';
 import { ActivatedRoute } from '@angular/router';
 import { LoggerService } from '../../global';
-import { Subscription } from 'rxjs';
 import { LottoTicketDetailBoxModel, LottoTicketDetailModel } from './lotto-ticket-detail.models';
+import { Subscription } from 'rxjs';
 
 const CLASS = "LottoTicketDetailComponent";
 

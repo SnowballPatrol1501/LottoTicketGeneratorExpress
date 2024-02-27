@@ -16,9 +16,9 @@ export class LottoTicketDetailModel extends LottoTicketDetailResult {
 export class LottoTicketDetailBoxModel extends LottoTicketDetailBoxResult {
     constructor(dto: LottoTicketDetailBoxResult) {
         super();
-        return { 
+        return {
             ...dto,
-            numbers: dto.numbersCsv.split(',').map(n => JSON.parse(n))
+            numbers: dto.numbersCsv.split(',').map(n => <number>JSON.parse(n)).sort()
         };
     }
 

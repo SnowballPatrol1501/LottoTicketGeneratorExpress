@@ -1,5 +1,5 @@
 import { LottoTicketBox } from "./lotto-ticket-box";
-import { Random } from "./shared/random";
+import { Random } from "./shared";
 
 export class LottoTicket {
     constructor() {
@@ -13,11 +13,11 @@ export class LottoTicket {
     public lottoTicketBoxes: LottoTicketBox[];
 
     public static create(cmd: LottoTicketCreateCommand): LottoTicket {
-        var lottoTicket = new LottoTicket();
+        const lottoTicket = new LottoTicket();
         for (let i = 1; i <= cmd.numOfBoxes; i++)
             lottoTicket.lottoTicketBoxes.push(LottoTicketBox.create(lottoTicket));
         if (cmd.generateSuperNumber) {
-            var rnd = new Random();
+            const rnd = new Random();
             lottoTicket.superNumber = rnd.next(9);
             lottoTicket.showSuperNumber = true;
         }

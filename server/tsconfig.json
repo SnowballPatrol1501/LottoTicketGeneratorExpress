@@ -9,7 +9,7 @@
     "include": [
         "src/**/*.ts",
         "src/controllers/*.ts"
-    ],
+, "src/services/dtos"    ],
     "exclude": [
         "node_modules"
     ]
